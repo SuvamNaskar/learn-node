@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> - Task Manager</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="/" class="text-white text-xl font-bold">Task Manager</a>
+                <div class="space-x-4">
+                    <a href="/" class="text-white font-semibold">Home</a>
+                    <a href="/tasks" class="text-blue-100 hover:text-white transition">Tasks</a>
+                    <a href="/tasks/new" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition">New Task</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <div class="text-center mb-16">
+            <div class="mb-8">
+                <svg class="mx-auto h-24 w-24 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2M15 13l-3 3-3-3m0 0l3-3 3 3"></path>
+                </svg>
+            </div>
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">Welcome to Task Manager</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                Stay organized and boost your productivity with our simple and intuitive task management system. 
+                Create, manage, and track your tasks all in one place.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/tasks" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition shadow-lg">
+                    View All Tasks
+                </a>
+                <a href="/tasks/new" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition shadow-lg">
+                    Create New Task
+                </a>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition">
+                <div class="mb-4">
+                    <svg class="mx-auto h-12 w-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Create Tasks</h3>
+                <p class="text-gray-600 mb-4">
+                    Easily add new tasks with titles and detailed descriptions to keep track of everything you need to do.
+                </p>
+                <a href="/tasks/new" class="inline-flex items-center text-green-600 hover:text-green-700 font-medium">
+                    Get Started
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition">
+                <div class="mb-4">
+                    <svg class="mx-auto h-12 w-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Manage Tasks</h3>
+                <p class="text-gray-600 mb-4">
+                    View, edit, and organize your tasks. Update descriptions, modify titles, and keep everything current.
+                </p>
+                <a href="/tasks" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                    View Tasks
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-8 text-center hover:shadow-lg transition">
+                <div class="mb-4">
+                    <svg class="mx-auto h-12 w-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">Track Progress</h3>
+                <p class="text-gray-600 mb-4">
+                    Mark tasks as complete and monitor your productivity. See your accomplishments at a glance.
+                </p>
+                <a href="/tasks" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium">
+                    Track Now
+                    <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Stats or Call to Action -->
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Get Organized?</h2>
+            <p class="text-gray-600 mb-6">
+                Join thousands of users who have improved their productivity with our task management system.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/tasks/new" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition shadow-lg">
+                    Create Your First Task
+                </a>
+                <a href="/tasks" class="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-lg font-semibold transition">
+                    Browse Existing Tasks
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 py-8 text-center">
+            <p class="text-gray-300">
+                © 2025 Suvam Naskar - Task Manager. Built with Node.js, Express, and MongoDB.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
