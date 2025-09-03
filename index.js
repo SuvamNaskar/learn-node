@@ -1,6 +1,12 @@
 const express = require('express');
+const userRoutes = require('./routes/users');
 
 const app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+app.use('/users', userRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
